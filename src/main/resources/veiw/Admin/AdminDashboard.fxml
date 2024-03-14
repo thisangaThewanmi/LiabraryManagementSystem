@@ -24,7 +24,7 @@
                                 <InnerShadow />
                             </effect>
                         </JFXButton>
-                        <JFXButton fx:id="btnMnageBranches" buttonType="RAISED" layoutX="18.0" layoutY="362.0" onAction="#BtnManageBranchesOnAction" prefHeight="50.0" prefWidth="173.0" ripplerFill="#0f2f6b" style="-fx-background-color: dab49d; -fx-background-radius: 20;" text="Manage Branches">
+                        <JFXButton fx:id="btnManageBranches" buttonType="RAISED" layoutX="18.0" layoutY="362.0" onAction="#BtnManageBranchesOnAction" prefHeight="50.0" prefWidth="173.0" ripplerFill="#0f2f6b" style="-fx-background-color: dab49d; -fx-background-radius: 20;" text="Manage Branches">
                             <font>
                                 <Font size="16.0" />
                             </font>
