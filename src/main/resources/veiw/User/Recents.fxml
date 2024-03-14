@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1068.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.Recents">
+    <children>
+        <Pane layoutX="294.0" layoutY="84.0" prefHeight="616.0" prefWidth="758.0" style="-fx-background-color: #dad4be; -fx-background-radius: 20;">
+            <children>
+                <TableView layoutX="17.0" layoutY="15.0" prefHeight="586.0" prefWidth="724.0">
+                    <columns>
+                        <TableColumn fx:id="clBookId" prefWidth="95.0" text="BookId" />
+                        <TableColumn fx:id="clmBranch" minWidth="0.0" prefWidth="0.0" text="Branch" />
+                        <TableColumn fx:id="clTitle" prefWidth="142.0" text="Title" />
+                        <TableColumn fx:id="clGenre" prefWidth="122.0" text="Genere" />
+                        <TableColumn fx:id="clAuthor" prefWidth="127.0" text="Authour" />
+                        <TableColumn fx:id="clBorrowDate" prefWidth="119.0" text="BorrowDate" />
+                  <TableColumn fx:id="clReturnDate" prefWidth="119.0" text="ReturnDate" />
+                    </columns>
+                </TableView>
+                <ImageView fitHeight="554.0" fitWidth="959.0" layoutX="16.0" layoutY="47.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/OIP.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="564.0" fitWidth="554.0" layoutX="194.0" layoutY="50.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/OIP.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="660.0" style="-fx-background-color: #ddbea9; -fx-background-radius: 20;">
+         <children>
+                <Label fx:id="lblManageBooks1" layoutX="42.0" layoutY="5.0" prefHeight="34.0" prefWidth="186.0" text="Recent Reads">
+                    <font>
+                        <Font name="System Italic" size="27.0" />
+                    </font>
+                </Label>
+         </children>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="76.0" prefHeight="626.0" prefWidth="260.0" style="-fx-background-color: #efe5dc; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="517.0" fitWidth="260.0" layoutX="6.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/bg1.jpg" />
+               </image>
+            </ImageView>
+         </children></Pane>
+        <Pane layoutX="695.0" layoutY="17.0" prefHeight="46.0" prefWidth="331.0" style="-fx-background-color: #efe5dc; -fx-background-radius: 20;" />
+    </children>
+</AnchorPane>

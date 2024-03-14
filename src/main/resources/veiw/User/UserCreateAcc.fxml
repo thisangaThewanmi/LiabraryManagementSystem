@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainPane" prefHeight="695.0" prefWidth="763.0" style="-fx-background-color: #776B5D; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ManageUserCreateAccount">
+    <children>
+        <ImageView fitHeight="704.0" fitWidth="812.0" layoutX="-8.0" opacity="0.74" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assests/admin.jpg" />
+            </image>
+        </ImageView>
+        <Pane layoutX="350.0" layoutY="26.0" prefHeight="653.0" prefWidth="351.0" style="-fx-background-color: #bcb8b1; -fx-background-radius: 20;">
+            <children>
+                <ImageView fitHeight="379.0" fitWidth="351.0" layoutX="-1.0" opacity="0.66" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/OIP.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="381.0" fitWidth="351.0" layoutX="-1.0" layoutY="296.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/OIP.jpg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="20.0" layoutY="21.0" prefHeight="47.0" prefWidth="256.0" text="Dear User ;">
+                    <font>
+                        <Font name="System Bold Italic" size="22.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="0.49029126213592233" endY="0.6359223300970873" startX="0.5679611650485437">
+                            <stops>
+                                <Stop color="BLACK" />
+                                <Stop color="#a14141" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <TextField fx:id="txtEmail" layoutX="20.0" layoutY="312.0" prefHeight="39.0" prefWidth="278.0" style="-fx-background-radius: 20;" />
+                <TextField fx:id="txtPassword" layoutX="31.0" layoutY="410.0" prefHeight="39.0" prefWidth="278.0" style="-fx-background-radius: 20;" />
+                <Label layoutX="31.0" layoutY="286.0" prefHeight="21.0" prefWidth="182.0" text="Email">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font></Label>
+                <JFXButton buttonType="RAISED" layoutX="66.0" layoutY="583.0" onAction="#btnCreateAccount" prefHeight="28.0" prefWidth="217.0" style="-fx-background-color: #ffcdb2; -fx-background-radius: 20;" text="Create An Account">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></JFXButton>
+                <Label layoutX="31.0" layoutY="378.0" prefHeight="21.0" prefWidth="182.0" text="Password">
+                    <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="17.0" layoutY="68.0" prefHeight="28.0" prefWidth="306.0" text="Welcome to BookWorm Liabrary">
+                    <font>
+                        <Font name="System Bold Italic" size="19.0" />
+                    </font>
+                </Label>
+            <Label layoutX="31.0" layoutY="115.0" prefHeight="47.0" prefWidth="278.0" text="Create Your own Account">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.5631067961165048" endY="0.7864077669902912" startX="0.5679611650485437">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#a14141" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="txtName" layoutX="20.0" layoutY="226.0" prefHeight="39.0" prefWidth="278.0" style="-fx-background-radius: 20;" />
+            <Label layoutX="31.0" layoutY="187.0" prefHeight="21.0" prefWidth="182.0" text="Name">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbBranch" layoutX="37.0" layoutY="495.0" prefHeight="39.0" prefWidth="278.0" style="-fx-background-radius: 20;" />
+            <Label layoutX="31.0" layoutY="461.0" prefHeight="21.0" prefWidth="182.0" text="Branch">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+          <Pane layoutX="151.0" layoutY="292.0" opacity="0.13" prefHeight="86.0" prefWidth="92.0" style="-fx-background-color: #776B5D; -fx-background-radius: 100;">
+              <effect>
+                  <Shadow />
+              </effect>
+          </Pane>
+      <ImageView fitHeight="99.0" fitWidth="98.0" layoutX="114.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/admin3.png" />
+         </image>
+      </ImageView>
+          <Pane layoutX="7.0" layoutY="98.0" opacity="0.09" prefHeight="410.0" prefWidth="313.0" style="-fx-background-color: #776B5D;">
+              <effect>
+                  <Shadow />
+              </effect>
+          </Pane>
+      <JFXButton layoutX="49.0" layoutY="26.0" onAction="#bbtnBackOnAction" text="Back" textFill="#f5f0f0" />
+    </children>
+</AnchorPane>

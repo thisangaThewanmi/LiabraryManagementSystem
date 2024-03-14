@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1068.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ManageReturnBooks">
+    <children>
+        <Pane layoutX="419.0" layoutY="314.0" prefHeight="379.0" prefWidth="635.0" style="-fx-background-color: #dad4be; -fx-background-radius: 20;">
+            <children>
+                <TableView layoutX="14.0" layoutY="39.0" prefHeight="320.0" prefWidth="603.0">
+                    <columns>
+                        <TableColumn fx:id="clBookId" prefWidth="84.0" text="BookId" />
+                        <TableColumn fx:id="clmTitle" minWidth="0.0" prefWidth="162.0" text="Title" />
+                        <TableColumn fx:id="clAuthor" prefWidth="133.0" text="Author" />
+                        <TableColumn fx:id="clmGenre" prefWidth="115.0" text="Genre" />
+                        <TableColumn fx:id="clmAvailableNo" prefWidth="107.0" text="Available:No" />
+                    </columns>
+                </TableView>
+                <ImageView fitHeight="301.0" fitWidth="355.0" layoutX="16.0" layoutY="68.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/OIP.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="315.0" fitWidth="301.0" layoutX="318.0" layoutY="66.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/OIP.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="18.0" prefHeight="682.0" prefWidth="389.0" style="-fx-background-color: #ddbea9; -fx-background-radius: 20;">
+            <children>
+                <Label fx:id="lblManageBooks1" layoutX="30.0" layoutY="14.0" prefHeight="39.0" prefWidth="234.0" text="Return Books">
+                    <font>
+                        <Font name="System Italic" size="27.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="217.0" fitWidth="100.0" layoutX="41.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/8f639c2617cfa83c250c5c9540867331-removebg-preview.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="30.0" layoutY="111.0" prefHeight="23.0" prefWidth="53.0" text="BookId" />
+                <Label layoutX="30.0" layoutY="167.0" prefHeight="23.0" prefWidth="61.0" text="Title" />
+                <Label layoutX="30.0" layoutY="224.0" prefHeight="23.0" prefWidth="61.0" text="Genre" />
+                <Label layoutX="25.0" layoutY="283.0" prefHeight="32.0" prefWidth="114.0" text="BorrowDate" />
+                <Label layoutX="26.0" layoutY="349.0" prefHeight="32.0" prefWidth="114.0" text="ReturnDate" />
+                <TextField fx:id="txtBookId" layoutX="115.0" layoutY="107.0" style="-fx-background-radius: 20;" />
+                <TextField fx:id="txtTitle" layoutX="115.0" layoutY="163.0" style="-fx-background-radius: 20;" />
+                <TextField fx:id="txtGenre" layoutX="115.0" layoutY="220.0" style="-fx-background-radius: 20;" />
+                <JFXDatePicker fx:id="txtReturnDate" layoutX="124.0" layoutY="345.0" prefHeight="31.0" prefWidth="186.0" />
+                <JFXDatePicker fx:id="txtBorrowDate" layoutX="124.0" layoutY="284.0" prefHeight="31.0" prefWidth="186.0" />
+                <JFXButton buttonType="RAISED" layoutX="168.0" layoutY="541.0" onAction="#returnOnAction" prefHeight="39.0" prefWidth="162.0" text="Return">
+                    <effect>
+                        <Shadow />
+                    </effect>
+                </JFXButton>
+            </children>
+        </Pane>
+        <Pane layoutX="425.0" layoutY="26.0" prefHeight="274.0" prefWidth="219.0" style="-fx-background-color: #efe5dc; -fx-background-radius: 20;">
+            <children>
+                <ImageView fitHeight="262.0" fitWidth="301.0" layoutX="21.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/reader.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="652.0" layoutY="26.0" prefHeight="126.0" prefWidth="389.0" style="-fx-background-color: #efe5dc; -fx-background-radius: 20;">
+            <children>
+                <ImageView fitHeight="249.0" fitWidth="301.0" layoutX="40.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assests/WHY-CONSIDER-SKOOLBEEP-THE-BEST-SCHOOL-LIBRARY-AUTOMATION-SOFTWARE-min.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="660.0" layoutY="163.0" prefHeight="136.0" prefWidth="380.0" style="-fx-background-color: #ddbea9; -fx-background-radius: 20;">
+            <children>
+                <Label layoutX="21.0" layoutY="28.0" prefHeight="51.0" prefWidth="291.0" text="Total Books Returned">
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop color="#e11515" />
+                                <Stop color="#9e2383" offset="1.0" />
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                    <font>
+                        <Font name="System Italic" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

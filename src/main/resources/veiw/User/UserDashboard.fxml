@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="801.0" prefWidth="1267.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ManageUserDashboard">
+    <children>
+        <AnchorPane prefHeight="801.0" prefWidth="1317.0" style="-fx-background-color: #c89f9c;">
+            <children>
+                <AnchorPane fx:id="sidePane" prefHeight="801.0" prefWidth="225.0" style="-fx-background-color: white;">
+                    <children>
+                        <JFXButton fx:id="BtnManageBooks" buttonType="RAISED" layoutX="11.0" layoutY="259.0" onAction="#btnBorrowBooksOnAction" prefHeight="50.0" prefWidth="183.0" ripplerFill="#ebc5aa" style="-fx-background-color: dab49d; -fx-background-radius: 20;" text="Borrow Books" textAlignment="RIGHT">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <effect>
+                                <InnerShadow />
+                            </effect>
+                        </JFXButton>
+                        <JFXButton fx:id="btnManageBranches" buttonType="RAISED" layoutX="18.0" layoutY="362.0" onAction="#BtnReturnBooksOnAction" prefHeight="50.0" prefWidth="173.0" ripplerFill="#0f2f6b" style="-fx-background-color: dab49d; -fx-background-radius: 20;" text="Return Books">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnTransaction" buttonType="RAISED" layoutX="18.0" layoutY="469.0" onAction="#btnMyLiabraryOnAction" prefHeight="50.0" prefWidth="173.0" style="-fx-background-color: dab49d; -fx-background-radius: 20; " text="My Liabry" textAlignment="JUSTIFY">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <Text fx:id="userName" layoutX="116.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="85.0">
+                            <font>
+                                <Font name=" Regular" size="20.0" />
+                            </font>
+                        </Text>
+                        <JFXButton fx:id="btnSetting" buttonType="RAISED" layoutX="10.0" layoutY="582.0" onAction="#btnSettingsOnAction" prefHeight="50.0" prefWidth="183.0" style="-fx-background-color: dab49d; -fx-background-radius: 20;" text="Settings" textAlignment="JUSTIFY">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </JFXButton>
+                        <Label layoutX="54.0" layoutY="45.0" prefHeight="38.0" prefWidth="173.0" text="BookWorm">
+                            <font>
+                                <Font name="System Italic" size="24.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="0.9029126213592233" startX="0.6407766990291262" startY="0.029126213592232997">
+                                    <stops>
+                                        <Stop color="#362536" />
+                                        <Stop color="#8d134a" offset="0.9084967320261438" />
+                                        <Stop color="WHITE" offset="0.9444444444444444" />
+                                        <Stop color="WHITE" offset="0.9444444444444444" />
+                                        <Stop color="WHITE" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                        <Label layoutX="72.0" layoutY="78.0" prefHeight="38.0" prefWidth="109.0" text="Liabrary">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="0.7864077669902911" startX="0.4126213592233009" startY="0.46601941747572817">
+                                    <stops>
+                                        <Stop color="#d30ed0" />
+                                        <Stop color="#070707" offset="0.9084967320261438" />
+                                        <Stop color="WHITE" offset="0.9444444444444444" />
+                                        <Stop color="WHITE" offset="0.9444444444444444" />
+                                        <Stop color="WHITE" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <JFXButton fx:id="logout" buttonType="RAISED" layoutX="1080.0" layoutY="14.0" onAction="#logoutOnAction" prefHeight="38.0" prefWidth="109.0" ripplerFill="#17100a" text="LOG OUT">
+                    <font>
+                        <Font name="Baloo Da 2 Bold" size="15.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </JFXButton>
+                <Text fx:id="txtDate1" fill="#252323" layoutX="409.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="108.99999999999966">
+                    <font>
+                        <Font name="Baloo Bhai 2 SemiBold" size="20.0" />
+                    </font>
+                </Text>
+            <JFXButton layoutX="264.0" layoutY="14.0" onAction="#btnBackOnAction" text="BACK" textFill="#f5eeee" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="DashPane" layoutX="243.0" layoutY="60.0" prefHeight="718.0" prefWidth="1058.0" style="-fx-background-radius: 50; -fx-background-color: white;" />
+    </children>
+</AnchorPane>
