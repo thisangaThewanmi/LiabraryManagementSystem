@@ -29,6 +29,8 @@ public class Book{
 
     }
 
+    public Book(){}
+
     public Book(int bookId, String title, String author, String category, String availability, Branch branch) {
         BookId = bookId;
         this.title = title;

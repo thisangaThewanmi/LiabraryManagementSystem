@@ -103,4 +103,9 @@ public class BookDaoImpl implements BookDao {
     public Book get(String data) throws SQLException {
         return null;
     }
+
+    @Override
+    public void updateAvailability(Session session, int bookId, String notAvailable) {
+
+    }
 }
