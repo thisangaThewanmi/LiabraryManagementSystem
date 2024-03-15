@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Shadow?>
@@ -80,12 +79,6 @@
             </Label>
             <TextField fx:id="txtName" layoutX="20.0" layoutY="226.0" prefHeight="39.0" prefWidth="278.0" style="-fx-background-radius: 20;" />
             <Label layoutX="31.0" layoutY="187.0" prefHeight="21.0" prefWidth="182.0" text="Name">
-               <font>
-                  <Font name="System Bold Italic" size="14.0" />
-               </font>
-            </Label>
-            <ComboBox fx:id="cmbBranch" layoutX="37.0" layoutY="495.0" prefHeight="39.0" prefWidth="278.0" style="-fx-background-radius: 20;" />
-            <Label layoutX="31.0" layoutY="461.0" prefHeight="21.0" prefWidth="182.0" text="Branch">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>

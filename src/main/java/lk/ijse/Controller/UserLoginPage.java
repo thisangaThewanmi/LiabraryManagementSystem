@@ -17,6 +17,8 @@ public class UserLoginPage {
 
     public void btnLoginOnAction(ActionEvent actionEvent) {
         try {
+
+            userLogin();
             Parent newRoot = FXMLLoader.load(getClass().getResource("/veiw/User/UserDashboard.fxml"));
             Scene newScene = new Scene(newRoot);
 
@@ -35,8 +37,16 @@ public class UserLoginPage {
         }
     }
 
+    private void userLogin() {
+
+        String email=txtUserName.getText();
+        String password =txtPassword.getText();
+    }
+
 
     public void btnRegisterOnAction(ActionEvent actionEvent) {
+       userRegistration();
+        
         try {
             Parent newRoot = FXMLLoader.load(getClass().getResource("/veiw/User/UserCreateAcc.fxml"));
             Scene newScene = new Scene(newRoot);
@@ -54,6 +64,9 @@ public class UserLoginPage {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private void userRegistration() {
     }
 
 
