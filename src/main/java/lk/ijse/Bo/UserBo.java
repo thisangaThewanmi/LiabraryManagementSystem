@@ -17,6 +17,6 @@ public interface UserBo {
 
     List<UserDto> getAllUsers() throws SQLException;
 
-    BookDto getUser(String text) throws SQLException;
+    UserDto getUser(String text) throws SQLException;
 
 }

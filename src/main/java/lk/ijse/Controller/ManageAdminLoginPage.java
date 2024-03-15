@@ -45,13 +45,13 @@ public class ManageAdminLoginPage {
                 // Show the new stage and close the current stage
                 currentStage.close();
                 newStage.show();
-                new Alert(Alert.AlertType.CONFIRMATION,"Sucessfully logged");
+                new Alert(Alert.AlertType.CONFIRMATION,"Sucessfully logged").showAndWait();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
 
         }
-        new Alert(Alert.AlertType.ERROR,"Wrong Credentials");
+        new Alert(Alert.AlertType.ERROR,"Wrong Credentials").showAndWait();
     }
 
 

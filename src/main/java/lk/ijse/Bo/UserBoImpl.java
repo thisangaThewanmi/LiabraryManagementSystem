@@ -3,7 +3,6 @@ package lk.ijse.Bo;
 import lk.ijse.DAO.UserDao;
 import lk.ijse.DAO.UserDaoImpl;
 import lk.ijse.Entity.User;
-import lk.ijse.dto.BookDto;
 import lk.ijse.dto.UserDto;
 
 import java.sql.SQLException;
@@ -34,7 +33,7 @@ public class UserBoImpl implements UserBo {
     }
 
     @Override
-    public BookDto getUser(String text) throws SQLException {
+    public UserDto getUser(String text) throws SQLException {
         return null;
     }
 }

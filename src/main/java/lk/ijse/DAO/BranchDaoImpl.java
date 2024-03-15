@@ -1,5 +1,6 @@
 package lk.ijse.DAO;
 
+import lk.ijse.Entity.Branch;
 import lk.ijse.Entity.User;
 import lk.ijse.config.FactoryConfiguration;
 import org.hibernate.Session;
@@ -9,9 +10,9 @@ import org.hibernate.query.Query;
 import java.sql.SQLException;
 import java.util.List;
 
-public class UserDaoImpl implements UserDao{
+public class BranchDaoImpl implements BranchDao {
     @Override
-    public boolean save(User entity) {
+    public boolean save(Branch entity) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
@@ -29,7 +30,7 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public boolean update(User entity) throws SQLException {
+    public boolean update(Branch entity) throws SQLException {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
@@ -48,27 +49,47 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public boolean delete(String name) throws SQLException {
-        Session session = FactoryConfiguration.getInstance().getSession();
+        /*Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        try {
-            User user = new User();
-            user.setEmail(name);
-            session.delete(user);
-            transaction.commit();
+        Query<Branch> query = session.createQuery("FROM Branch WHERE branchName = :branchName", Branch.class);
+        query.setParameter("branchName", name);
+        transaction.commit();
+        Branch branch = query.uniqueResult();
+        if (branch != null) {
+            session.delete(branch);
             return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            transaction.rollback();
+        } else {
+            // Branch not found
             return false;
-        } finally {
-            session.close();
+        }*/
+
+
+            Session session = FactoryConfiguration.getInstance().getSession();
+            Transaction transaction = session.beginTransaction();
+
+            Query<Branch> query = session.createQuery("FROM Branch WHERE branchName = :branchName", Branch.class);
+            query.setParameter("branchName", name);
+
+            Branch branch = query.uniqueResult();
+            if (branch != null) {
+                session.delete(branch);
+                transaction.commit(); // Committing transaction after deleting
+                return true;
+            } else {
+                transaction.rollback(); // Rolling back transaction if branch is not found
+                return false;
+            }
         }
 
-    }
+
+
+
+
+
 
     @Override
-    public List<User> loadAll() throws SQLException {
+    public List<Branch> loadAll() throws SQLException {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
@@ -80,7 +101,7 @@ public class UserDaoImpl implements UserDao{
 
 
     @Override
-    public User get(String data) throws SQLException {
+    public Branch get(String data) throws SQLException {
         return null;
     }
 }
