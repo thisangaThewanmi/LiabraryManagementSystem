@@ -22,7 +22,7 @@ public class ManageUserDashboard {
     public AnchorPane DashPane;
 
     public void btnBorrowBooksOnAction(ActionEvent actionEvent) {
-       /* Parent fxml = null;
+        Parent fxml = null;
         try {
             fxml = FXMLLoader.load(getClass().getResource("/veiw/User/UserBorrowBOOKS.fxml"));
             DashPane.getChildren().removeAll();
@@ -30,7 +30,7 @@ public class ManageUserDashboard {
             DashPane.getChildren().setAll(fxml);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }*/
+        }
 
     }
 
@@ -57,5 +57,14 @@ public class ManageUserDashboard {
     }
 
     public void BtnReturnBooksOnAction(ActionEvent actionEvent) {
+        Parent fxml = null;
+        try {
+            fxml = FXMLLoader.load(getClass().getResource("/veiw/User/ReturnBooks.fxml"));
+            DashPane.getChildren().removeAll();
+
+            DashPane.getChildren().setAll(fxml);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -26,12 +26,12 @@
                 </TableView>
                 <ImageView fitHeight="554.0" fitWidth="959.0" layoutX="16.0" layoutY="47.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assests/OIP.jpg" />
+                        <Image url="@../../assests/OIP.jpg" />
                     </image>
                 </ImageView>
                 <ImageView fitHeight="564.0" fitWidth="554.0" layoutX="194.0" layoutY="50.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assests/OIP.jpg" />
+                        <Image url="@../../assests/OIP.jpg" />
                     </image>
                 </ImageView>
             </children>
@@ -49,7 +49,7 @@
          <children>
             <ImageView fitHeight="517.0" fitWidth="260.0" layoutX="6.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assests/bg1.jpg" />
+                  <Image url="@../../assests/bg1.jpg" />
                </image>
             </ImageView>
          </children></Pane>

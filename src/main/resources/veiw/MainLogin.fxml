@@ -1,11 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c89f9c; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.MainLogin">
+<AnchorPane fx:id="mainPane" prefHeight="486.0" prefWidth="581.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.MainLogin">
    <children>
-      <JFXButton fx:id="btnAdmin" layoutX="88.0" layoutY="154.0" onAction="#btnAdminOnAction" text="Admin" />
-      <JFXButton fx:id="btnUser" layoutX="421.0" layoutY="163.0" onAction="#btnUserOnAction" text="User" />
+      <ImageView fitHeight="580.0" fitWidth="605.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/OIP.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnAdmin" layoutX="76.0" layoutY="212.0" onAction="#btnAdminOnAction" prefHeight="337.0" prefWidth="191.0" style="-fx-background-color: #FF6663; -fx-background-radius: 20;" text="Admin">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#f53a3a" />
+                  <Stop color="#322a2a" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+         <effect>
+            <MotionBlur radius="6.85" />
+         </effect></JFXButton>
+      <JFXButton fx:id="btnUser" layoutX="305.0" layoutY="212.0" onAction="#btnUserOnAction" prefHeight="337.0" prefWidth="177.0" style="-fx-background-color: #AB6463; -fx-background-radius: 20;" text="User">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#f53a3a" />
+                  <Stop color="#1e0f0f" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></JFXButton>
+      <Label layoutX="136.0" layoutY="25.0" prefHeight="84.0" prefWidth="308.0" text="Welcome  to Book Worm Liabrary">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#f53a3a" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="202.0" layoutY="116.0" prefHeight="41.0" prefWidth="191.0" text="LOG IN AS...." textFill="#4a1313">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
    </children>
+   <effect>
+      <Glow />
+   </effect>
 </AnchorPane>

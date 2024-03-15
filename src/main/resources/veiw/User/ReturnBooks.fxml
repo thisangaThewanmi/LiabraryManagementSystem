@@ -17,25 +17,25 @@
 
 <AnchorPane prefHeight="718.0" prefWidth="1068.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.ManageReturnBooks">
     <children>
-        <Pane layoutX="419.0" layoutY="314.0" prefHeight="379.0" prefWidth="635.0" style="-fx-background-color: #dad4be; -fx-background-radius: 20;">
+        <Pane fx:id="tblReturnBooks" layoutX="419.0" layoutY="314.0" prefHeight="379.0" prefWidth="635.0" style="-fx-background-color: #dad4be; -fx-background-radius: 20;">
             <children>
                 <TableView layoutX="14.0" layoutY="39.0" prefHeight="320.0" prefWidth="603.0">
                     <columns>
-                        <TableColumn fx:id="clBookId" prefWidth="84.0" text="BookId" />
-                        <TableColumn fx:id="clmTitle" minWidth="0.0" prefWidth="162.0" text="Title" />
-                        <TableColumn fx:id="clAuthor" prefWidth="133.0" text="Author" />
-                        <TableColumn fx:id="clmGenre" prefWidth="115.0" text="Genre" />
-                        <TableColumn fx:id="clmAvailableNo" prefWidth="107.0" text="Available:No" />
+                        <TableColumn fx:id="clBookId" prefWidth="78.0" text="BookId" />
+                        <TableColumn fx:id="clmTitle" minWidth="0.0" prefWidth="138.0" text="Title" />
+                        <TableColumn fx:id="clmGenere" prefWidth="125.0" text="Genere" />
+                        <TableColumn fx:id="clmBorrowDate" prefWidth="134.0" text="Borrowed date" />
+                        <TableColumn fx:id="clmReturnDate" prefWidth="126.0" text="Return Date" />
                     </columns>
                 </TableView>
                 <ImageView fitHeight="301.0" fitWidth="355.0" layoutX="16.0" layoutY="68.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assests/OIP.jpg" />
+                        <Image url="@../../assests/OIP.jpg" />
                     </image>
                 </ImageView>
                 <ImageView fitHeight="315.0" fitWidth="301.0" layoutX="318.0" layoutY="66.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assests/OIP.jpg" />
+                        <Image url="@../../assests/OIP.jpg" />
                     </image>
                 </ImageView>
             </children>
@@ -49,7 +49,7 @@
                 </Label>
                 <ImageView fitHeight="217.0" fitWidth="100.0" layoutX="41.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assests/8f639c2617cfa83c250c5c9540867331-removebg-preview.png" />
+                        <Image url="@../../assests/8f639c2617cfa83c250c5c9540867331-removebg-preview.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="30.0" layoutY="111.0" prefHeight="23.0" prefWidth="53.0" text="BookId" />
@@ -73,7 +73,7 @@
             <children>
                 <ImageView fitHeight="262.0" fitWidth="301.0" layoutX="21.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assests/reader.jpg" />
+                        <Image url="@../../assests/reader.jpg" />
                     </image>
                 </ImageView>
             </children>
@@ -82,7 +82,7 @@
             <children>
                 <ImageView fitHeight="249.0" fitWidth="301.0" layoutX="40.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assests/WHY-CONSIDER-SKOOLBEEP-THE-BEST-SCHOOL-LIBRARY-AUTOMATION-SOFTWARE-min.png" />
+                        <Image url="@../../assests/WHY-CONSIDER-SKOOLBEEP-THE-BEST-SCHOOL-LIBRARY-AUTOMATION-SOFTWARE-min.png" />
                     </image>
                 </ImageView>
             </children>
