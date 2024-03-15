@@ -3,6 +3,7 @@ package lk.ijse.DAO;
 import lk.ijse.Entity.Branch;
 import lk.ijse.Entity.User;
 import lk.ijse.config.FactoryConfiguration;
+import lk.ijse.dto.BranchDto;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -33,11 +34,12 @@ public class BranchDaoImpl implements BranchDao {
     public boolean update(Branch entity) throws SQLException {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
-
         try {
+
             session.update(entity);
             transaction.commit();
             return true;
+
         } catch (Exception e) {
             e.printStackTrace();
             transaction.rollback();
@@ -45,24 +47,11 @@ public class BranchDaoImpl implements BranchDao {
         } finally {
             session.close();
         }
+
     }
 
     @Override
     public boolean delete(String name) throws SQLException {
-        /*Session session = FactoryConfiguration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-
-        Query<Branch> query = session.createQuery("FROM Branch WHERE branchName = :branchName", Branch.class);
-        query.setParameter("branchName", name);
-        transaction.commit();
-        Branch branch = query.uniqueResult();
-        if (branch != null) {
-            session.delete(branch);
-            return true;
-        } else {
-            // Branch not found
-            return false;
-        }*/
 
 
             Session session = FactoryConfiguration.getInstance().getSession();
@@ -82,10 +71,10 @@ public class BranchDaoImpl implements BranchDao {
             }
         }
 
+    @Override
+    public void delete(int id) throws SQLException {
 
-
-
-
+    }
 
 
     @Override
@@ -94,7 +83,7 @@ public class BranchDaoImpl implements BranchDao {
         Transaction transaction = session.beginTransaction();
 
 
-        Query query = session.createQuery("FROM Admin");
+        Query query = session.createQuery("FROM Branch ", Branch.class);
         transaction.commit();
         return query.getResultList();
     }

@@ -9,6 +9,8 @@ public class BookDto {
     private  String availability;
     private int branchId;
 
+    private int copies;
+
     public BookDto(int bookId, String title, String author, String category, String availability, int branchId) {
         BookId = bookId;
         this.title = title;
@@ -25,6 +27,16 @@ public class BookDto {
         this.availability = availability;
         this.branchId = branchId;
 
+    }
+
+    public BookDto(int bookId, String title, String author, String category, String availability, int branchId, int copies) {
+        BookId = bookId;
+        this.title = title;
+        this.author = author;
+        this.category = category;
+        this.availability = availability;
+        this.branchId = branchId;
+        this.copies = copies;
     }
 
     public int getBookId() {
@@ -76,15 +88,24 @@ public class BookDto {
         this.branchId = branchId;
     }
 
+    public int getCopies() {
+        return copies;
+    }
+
+    public void setCopies(int copies) {
+        this.copies = copies;
+    }
+
     @Override
     public String toString() {
         return "BookDto{" +
-                "BookId='" + BookId + '\'' +
+                "BookId=" + BookId +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", category='" + category + '\'' +
                 ", availability='" + availability + '\'' +
-                ", branchId='" + branchId + '\'' +
+                ", branchId=" + branchId +
+                ", copies=" + copies +
                 '}';
     }
 }

@@ -21,7 +21,7 @@ public class BranchBoImpl implements BranchBo{
     @Override
     public boolean UpdateBranch(BranchDto dto) throws SQLException {
 
-       return  branchdao.update(new Branch(dto.getBranchId(), dto.getBranchName(), dto.getContact(), dto.getAddress()));
+       return  branchdao.update(new Branch( dto.getBranchName(), dto.getContact(), dto.getAddress()));
 
     }
 

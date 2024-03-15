@@ -20,7 +20,7 @@ public class Branch{
     @OneToMany(mappedBy = "branch")
     private List<Book> books;
 
-    public Branch(int branchId, String branchName, String contact, String address, List<Book> books) {
+    public Branch(String branchName, String contact, String address) {
         this.branchId = branchId;
         this.branchName = branchName;
         this.contact = contact;

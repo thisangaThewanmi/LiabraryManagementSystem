@@ -16,6 +16,8 @@ public class Book{
     @Column(nullable = false)
     private String category;
     private  String availability;
+
+    private int Copies;
     @ManyToOne
     private Branch branch;
 
@@ -23,7 +25,7 @@ public class Book{
 
     private List<User> userList;
 
-    public Book() {
+    public Book(int bookId, String title, String author, String category, String availability, int copies) {
 
     }
 
@@ -42,6 +44,17 @@ public class Book{
         this.author = author;
         this.category = category;
         this.availability = availability;
+        this.branch = branch;
+        this.userList = userList;
+    }
+
+    public Book(int bookId, String title, String author, String category, String availability, int copies, Branch branch, List<User> userList) {
+        BookId = bookId;
+        this.title = title;
+        this.author = author;
+        this.category = category;
+        this.availability = availability;
+        Copies = copies;
         this.branch = branch;
         this.userList = userList;
     }
@@ -102,6 +115,16 @@ public class Book{
         this.userList = userList;
     }
 
+
+
+    public int getCopies() {
+        return Copies;
+    }
+
+    public void setCopies(int copies) {
+        Copies = copies;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -110,6 +133,7 @@ public class Book{
                 ", author='" + author + '\'' +
                 ", category='" + category + '\'' +
                 ", availability='" + availability + '\'' +
+                ", Copies=" + Copies +
                 ", branch=" + branch +
                 ", userList=" + userList +
                 '}';

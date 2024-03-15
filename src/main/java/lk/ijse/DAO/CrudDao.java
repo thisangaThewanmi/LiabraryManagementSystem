@@ -9,6 +9,8 @@ public interface CrudDao<T> {
 
     boolean update(T entity) throws SQLException;
     boolean delete(String name) throws  SQLException;
+
+    void delete(int id) throws  SQLException;
     List<T> loadAll() throws SQLException;
     T get(String data) throws SQLException;
 

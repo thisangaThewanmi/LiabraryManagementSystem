@@ -1,17 +1,18 @@
 package lk.ijse.DAO;
 
-import lk.ijse.Entity.User;
+import jakarta.persistence.CacheRetrieveMode;
+import jakarta.persistence.CacheStoreMode;
+import jakarta.persistence.FlushModeType;
+import lk.ijse.Entity.Book;
 import lk.ijse.config.FactoryConfiguration;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.query.Query;
+import org.hibernate.*;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public class UserDaoImpl implements UserDao{
+public class BookDaoImpl implements BookDao {
     @Override
-    public boolean save(User entity) {
+    public boolean save(Book entity) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
@@ -29,7 +30,8 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public boolean update(User entity) throws SQLException {
+    public boolean update(Book entity) throws SQLException {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
@@ -48,44 +50,33 @@ public class UserDaoImpl implements UserDao{
 
     @Override
     public boolean delete(String name) throws SQLException {
-        Session session = FactoryConfiguration.getInstance().getSession();
-        Transaction transaction = session.beginTransaction();
-
-        try {
-            User user = new User();
-            user.setEmail(name);
-            session.delete(user);
-            transaction.commit();
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            transaction.rollback();
-            return false;
-        } finally {
-            session.close();
-        }
-
+        return false;
     }
 
     @Override
     public void delete(int id) throws SQLException {
-
-    }
-
-    @Override
-    public List<User> loadAll() throws SQLException {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
+        try {
 
-
-        Query query = session.createQuery("FROM Admin");
-        transaction.commit();
-        return query.getResultList();
+            session.createQuery("delete from Book where BookId = :id").setParameter("id", id).executeUpdate();
+            session.delete(id);
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
+            throw e;
+        } finally {
+            session.close();
+        }
     }
 
+    @Override
+    public List<Book> loadAll() throws SQLException {
+        return null;
+    }
 
     @Override
-    public User get(String data) throws SQLException {
+    public Book get(String data) throws SQLException {
         return null;
     }
 }
