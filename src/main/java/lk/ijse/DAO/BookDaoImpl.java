@@ -4,8 +4,10 @@ import jakarta.persistence.CacheRetrieveMode;
 import jakarta.persistence.CacheStoreMode;
 import jakarta.persistence.FlushModeType;
 import lk.ijse.Entity.Book;
+import lk.ijse.Entity.Branch;
 import lk.ijse.config.FactoryConfiguration;
 import org.hibernate.*;
+import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -50,7 +52,23 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public boolean delete(String name) throws SQLException {
-        return false;
+
+
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Query<Book> query = session.createQuery("FROM Book WHERE title = :name", Book.class);
+        query.setParameter("branchName", name);
+
+       Book book = query.uniqueResult();
+        if (book != null) {
+            session.delete(book);
+            transaction.commit(); // Committing transaction after deleting
+            return true;
+        } else {
+            transaction.rollback(); // Rolling back transaction if branch is not found
+            return false;
+        }
     }
 
     @Override
@@ -72,7 +90,13 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public List<Book> loadAll() throws SQLException {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+
+        Query query = session.createQuery("FROM Book ", Book.class);
+        transaction.commit();
+        return query.getResultList();
     }
 
     @Override

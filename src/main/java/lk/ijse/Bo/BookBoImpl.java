@@ -3,10 +3,12 @@ package lk.ijse.Bo;
 import lk.ijse.DAO.BookDao;
 import lk.ijse.DAO.BookDaoImpl;
 import lk.ijse.Entity.Book;
+import lk.ijse.Entity.Branch;
 import lk.ijse.dto.BookDto;
 import lk.ijse.dto.BranchDto;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -27,13 +29,25 @@ public class BookBoImpl implements BookBo{
 
     @Override
     public boolean DeleteBook(String name) throws SQLException {
+        System.out.println("boImplbranchName"+name);
+        return  bookdao.delete(name);
+    }
+
+    @Override
+    public boolean DeleteBook(int id) throws SQLException {
         return false;
     }
 
     @Override
     public List<BookDto> getAllBook() throws SQLException {
-        return null;
+        List<Book> bookList = bookdao.loadAll();
+        List<BookDto> dtos = new ArrayList<>();
+        for (Book book : bookList){
+            dtos.add(new BookDto(book.getBookId(),book.getTitle(),book.getAuthor(),book.getCategory(),book.getAvailability(), book.getBranch().getBranchId(),book.getCopies()));
+        }
+        return dtos;
     }
+
 
     @Override
     public BookDto getBook(String text) throws SQLException {

@@ -14,6 +14,8 @@ public interface BookBo {
 
     public boolean DeleteBook(String name) throws SQLException;
 
+    public boolean DeleteBook(int  id) throws SQLException;
+
 
     List<BookDto> getAllBook() throws SQLException;
 
